@@ -1,0 +1,201 @@
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato-Regular.ttf");
+	font-weight: normal;
+}
+
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 0;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: Lato, sans-serif;
+}
+
+body{
+	height: 2000px;
+}
+
+h1{
+	font-size: 100px;
+	position: absolute;
+	color: rgba(0,0,0,0);
+}
+
+h2{
+	font-size: 80px;
+	text-shadow: 3px 3px #21455d;
+	color: #FFFFFF;
+	margin-top: 30vh;
+}
+
+h3{
+	font-size: 30px;
+	color: #2c637f;
+}
+
+h4{
+	font-size: 20px;
+	line-height: 25px;
+}
+
+p{
+	font-size: 16px;
+}
+
+a{
+	font-size: 20px;
+	color: #2c637f;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 5px auto 0;
+}
+
+.wrapper{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.header__info{
+	height: 120px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.header__info img{
+	height: 100%;
+}
+
+.header__contacts{
+	display: flex;
+	flex-direction: column;
+}
+
+nav{
+	width: 100%;
+	background-color: rgba(0,0,0,0.05);
+}
+
+.panel{
+	display: flex;
+	justify-content: center;
+}
+
+li{
+	color: white;
+	font-size: 20px;
+	list-style-type: none;
+	padding: 20px 50px;
+}
+
+li a{
+	color: #FFFFFF;
+	font-size: 26px;
+}
+
+.header__tagline{
+	background-image: url("../img/background1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+	height: calc(100vh - 120px);
+}
+
+.delivery{
+	display: flex;
+	flex-direction: column;
+	padding: 50px;
+}
+
+.delivery__options{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.delivery__option{
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	width: 33.3333%;
+	justify-content: center;
+	padding: 20px;
+
+}
+
+.delivery__desc{
+	width: 100%;
+	padding: 50px;
+}
+
+.delivery__option h4{
+	color: #2c637f;
+}
+
+.delivery__option img{
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+
+.delivery__option_active h4{
+	font-size: 22px;
+	color: rgba(44, 99, 127, 0.85);
+	padding: 10px;
+	border-bottom: rgba(44,99,127,0.4) solid 2px;
+}
+
+.delivery__desc h4{
+	margin-bottom: 30px;
+}
+
+.delivery__desc p{
+	width: 90%;
+	margin: auto;
+}
+
+.calc{
+	height: 500px;
+	background: linear-gradient(#03639f, #fef397);
+	padding: 50px;
+}
+
+.calc h3{
+	color: #FFFFFF;
+}
+
+.contacts{
+	padding: 50px;
+}
+
+.contacts h3{
+	margin-bottom: 30px;
+}
+
+.contacts h4{
+	margin-bottom: 20px;
+}
+
+footer{
+	background-color: #21455d;
+	height: 150px;
+}
+
+.documents{
+	padding: 50px;
+}
+
+.price-term{
+	display: flex;
+	justify-content: space-around;
+}
