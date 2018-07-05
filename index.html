@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ООО "Сеть доставок"</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $("nav").on("click", "a", function (event) {
+              event.preventDefault();
+              let id = $(this).attr('href'),
+                  top = $(id).offset().top;
+              $('body,html').animate({scrollTop: top-120}, 800);
+          });
+      });
+  </script>
 </head>
 <body>
   <header>
@@ -26,9 +37,10 @@
     <div class="panel">
       <nav class="container nav_desktop">
           <ul class="panel">
-            <li><a>УСЛУГИ</a></li>
-            <li><a>ЦЕНЫ</a></li>
-            <li><a>КОНТАКТЫ</a></li>
+            <li><a href="#serv">УСЛУГИ</a></li>
+            <li><a href="#docs">ДОКУМЕНТЫ</a></li>
+            <li><a href="#accs">ДОСТАВКА</a></li>
+            <li><a href="#cont">КОНТАКТЫ</a></li>
           </ul>
       </nav>
       <nav class="nav_molile">
@@ -39,11 +51,10 @@
         <div class="burger-line third"></div>
         <div class="burger-line fourth"></div>
         <nav class="main-menu">
-          <a href="#">Пункт 1</a>
-          <a href="#">Пункт 2</a>
-          <a href="#">Пункт 3</a>
-          <a href="#">Пункт 4</a>
-          <a href="#">Пункт 5</a>
+          <a href="#serv">УСЛУГИ</a>
+          <a href="#docs">ДОКУМЕНТЫ</a>
+          <a href="#accs">ДОСТАВКА</a>
+          <a href="#cont">КОНТАКТЫ</a>
         </nav>
       </nav>
     </div>
@@ -52,7 +63,7 @@
     </div>
   </header>
   <main>
-    <section class="delivery container">
+    <section id="serv" class="delivery container">
       <div class="delivery__options">
         <div id="delivery_bel" class="delivery__option delivery__option_active">
           <figure>
@@ -81,7 +92,7 @@
           Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.</p>
       </div>
     </section>
-    <section class="advantages">
+    <section id="adv" class="advantages">
       <div class="container">
         <h3>ПОЧЕМУ МЫ?</h3>
         <ul>
@@ -95,7 +106,7 @@
         </ul>
       </div>
     </section>
-    <section class="documents container">
+    <section id="docs" class="documents container">
       <h3>ДОКУМЕНТЫ</h3>
       <figure>
         <a href="docs/dog-por.docx"><img src="img/document.png" alt="Договор поручение"></a>
@@ -114,7 +125,7 @@
         <figcaption>Правила оказания услуг</figcaption>
       </figure>
     </section>
-    <section class="accounts">
+    <section id="accs" class="accounts">
       <div class="container">
         <div class="calc">
           <h3>КАЛЬКУЛЯТОР</h3>
@@ -128,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts container">
+    <section id="cont" class="contacts container">
       <h3>КОНТАКТЫ</h3>
       <div class="contacts__info">
         <h4>ООО "СЕТЬ ДОСТАВОК"</h4>
