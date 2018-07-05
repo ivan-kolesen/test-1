@@ -2,93 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ООО "Сеть доставок"</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
   <header>
     <h1>ООО "Сеть доставок"</h1>
-    <div class="wrapper">
-      <section class="header__info">
-        <h3>ООО "СЕТЬ ДОСТАВОК"</h3>
-        <img src="img/logo2.png">
-        <div class="header__contacts">
-          <h3>НАШИ КОНТАКТЫ:</h3>
+    <section class="info container">
+      <div class="info__logo">
+        <img class="logo" src="img/logo2.png">
+      </div>
+      <div class="info__company">
+        <div class="info__company_name">
+          <h3>ООО "СЕТЬ ДОСТАВОК"</h3>
+        </div>
+        <div class="info__company_contacts">
           <a>+375 (29) 888-88-88</a>
           <a>email@mail.ru</a>
         </div>
-      </section>
-    </div>
-    <section class="header__tagline">
-      <nav>
-        <div class="wrapper">
+      </div>
+    </section>
+    <div class="panel">
+      <nav class="container nav_desktop">
           <ul class="panel">
             <li><a>УСЛУГИ</a></li>
             <li><a>ЦЕНЫ</a></li>
             <li><a>КОНТАКТЫ</a></li>
           </ul>
-        </div>
       </nav>
+      <nav class="nav_molile">
+        <input type="checkbox" id="check-menu">
+        <label for="check-menu">MENU</label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+        <nav class="main-menu">
+          <a href="#">Пункт 1</a>
+          <a href="#">Пункт 2</a>
+          <a href="#">Пункт 3</a>
+          <a href="#">Пункт 4</a>
+          <a href="#">Пункт 5</a>
+        </nav>
+      </nav>
+    </div>
+    <div class="tagline-container">
       <h2>НУЖНА БЫСТРАЯ ДОСТАВКА?</h2>
-    </section>
+    </div>
   </header>
   <main>
-    <div class="wrapper">
-      <section class="delivery">
-        <div class="delivery__options">
-          <div id="delivery_bel" class="delivery__option delivery__option_active">
+    <section class="delivery container">
+      <div class="delivery__options">
+        <div id="delivery_bel" class="delivery__option delivery__option_active">
+          <figure>
             <img src="img/delivery-icon-1.png">
-            <h4>ДОСТАВКА ПО<br>БЕЛАРУСИ</h4>
-          </div>
-          <div id="delivery_minsk" class="delivery__option">
+            <figcaption>ДОСТАВКА ПО БЕЛАРУСИ</figcaption>
+          </figure>
+        </div>
+        <div id="delivery_minsk" class="delivery__option">
+          <figure>
             <img src="img/delivery-icon-2.png">
-            <h4>ДОСТАВКА ПО<br>МИНСКУ</h4>
-          </div>
-          <div id="delivery_inet" class="delivery__option">
+            <figcaption>ДОСТАВКА ПО МИНСКУ</figcaption>
+          </figure>
+        </div>
+        <div id="delivery_inet" class="delivery__option">
+          <figure>
             <img src="img/delivery-icon-3.png">
-            <h4>ДОСТАВКА ИЗ<br>ИНТЕРНЕТ-МАГАЗИНОВ</h4>
-          </div>
+            <figcaption>ИЗ ИНТЕРНЕТ-МАГАЗИНОВ</figcaption>
+          </figure>
         </div>
-        <div class="delivery__desc">
-          <h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ПО БЕЛАРУСИ БЫСТРО КАЧЕСТВЕННО ДОСТУПНО</h4>
-          <p>Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
-            Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
-            Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
-            Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.</p>
+      </div>
+      <div class="delivery__desc">
+        <h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ПО БЕЛАРУСИ БЫСТРО КАЧЕСТВЕННО ДОСТУПНО</h4>
+        <p>Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
+          Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
+          Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
+          Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.</p>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="container">
+        <h3>ПОЧЕМУ МЫ?</h3>
+        <ul>
+          <li>Экспресс доставка и грузоперевозки в любой город Беларуси: быстро, качественно, доступно</li>
+          <li>Низкие цены и высокое качество обслуживания</li>
+          <li>Оперативная доставка</li>
+          <li>Мы учтём Ваши пожелания и подберем подходящие именно Вам условия</li>
+          <li>Удобные подъездные пути и большая гостевая парковка</li>
+          <li>Возможность использования складских помещений</li>
+          <li>Мы доставим Ваш груз в нужное место в удобное для Вас время</li>
+        </ul>
+      </div>
+    </section>
+    <section class="documents container">
+      <h3>ДОКУМЕНТЫ</h3>
+      <figure>
+        <a href="docs/dog-por.docx"><img src="img/document.png" alt="Договор поручение"></a>
+        <figcaption>Договор поручение</figcaption>
+      </figure>
+      <figure>
+        <a href="docs/dog-ul.doc"><img src="img/document.png" alt="Договор юридического лица"></a>
+        <figcaption>Договор юридического лица</figcaption>
+      </figure>
+      <figure>
+        <a href="docs/app-del.doc"><img src="img/document.png" alt="Заявка на доставку"></a>
+        <figcaption>Заявка на доставку</figcaption>
+      </figure>
+      <figure>
+        <a href="docs/rules.docx"><img src="img/document.png" alt="Правила оказания услуг"></a>
+        <figcaption>Правила оказания услуг</figcaption>
+      </figure>
+    </section>
+    <section class="accounts">
+      <div class="container">
+        <div class="calc">
+          <h3>КАЛЬКУЛЯТОР</h3>
         </div>
-      </section>
-    </div>
-    <section class="calc">
-      <div class="wrapper">
-        <div class="price-term">
-          <div class="price">
-            <h3>РАССЧИТАТЬ СТОИМОСТЬ</h3>
-          </div>
-          <div class="term">
-            <h3>ПРОВЕРЬТЕ ГОРОД</h3>
-          </div>
+        <div class="schedule">
+          <h3>РАСПИСАНИЕ ДОСТАВОК</h3>
+          <h4>Выберите город, чтобы узнать в какие дни осуществляется доставка</h4>
+          <select id="cities"></select>
+          <button id="btn-schedule">УЗНАТЬ</button>
+          <div class="schedule__answer"></div>
         </div>
       </div>
     </section>
-    <section class="documents">
-      <div class="wrapper">
-        <h3>ДОКУМЕНТЫ</h3>
-      </div>
-    </section>
-    <section class="contacts">
-      <div class="wrapper">
-        <h3>НАШИ КОНТАКТЫ</h3>
+    <section class="contacts container">
+      <h3>КОНТАКТЫ</h3>
+      <div class="contacts__info">
         <h4>ООО "СЕТЬ ДОСТАВОК"</h4>
-        <h4>АДРЕС: г.Минск, ул.Гурского, 18</h4>
         <h4>ГРАФИК РАБОТЫ: 9.00 - 21.30</h4>
+        <h4>АДРЕС: г.Минск, ул.Гурского, 18</h4>
         <h4>ТЕЛЕФОН: +375 (29) 888-88-88</h4>
         <h4>E-MAIL: mail@mail.ru</h4>
+      </div>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.570488991467!2d27.479056678400926!3d53.88896954617673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdaba91359697%3A0xf299b3b889028d0c!2z0YPQuy4g0JPRg9GA0YHQutC-0LPQviAxOCwg0JzQuNC90YHQuiwg0JHRltC70L7RgNGD0YHRjA!5e0!3m2!1suk!2sua!4v1530713982619" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </section>
   </main>
   <footer>
 
   </footer>
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
