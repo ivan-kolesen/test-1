@@ -72,14 +72,15 @@ a{
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-name: animation-call;
+	z-index: 999;
 }
 
 @-webkit-keyframes animation-call {
 	0% {}
-	20% {transform: rotate(-5deg);transform: scale(1.05)}
-	40% {transform: rotate(5deg);}
-	60% {transform: rotate(-5deg);}
-	80% {transform: rotate(5deg);}
+	20% {transform: rotate(-10deg);transform: scale(1.1)}
+	40% {transform: rotate(10deg);}
+	60% {transform: rotate(-10deg);}
+	80% {transform: rotate(10deg);}
 	100% {transform: rotate(0deg);}
 }
 
@@ -703,6 +704,7 @@ iframe{
 
 	.advantages li span{
 		height: 170%;
+		padding: 15px 5px;
 	}
 
 	.advantages li:nth-child(1){
@@ -944,6 +946,7 @@ iframe{
 
 	.tagline-container{
 		height: 80vh;
+		background-attachment: scroll;
 	}
 
 	.tagline-container form{
@@ -971,6 +974,7 @@ iframe{
 
 	.advantages li span{
 		height: 160%;
+		padding: 15px 5px;
 	}
 
 	.documents{
