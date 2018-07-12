@@ -20,6 +20,7 @@
 <body>
   <header>
     <h1>ООО "Сеть доставок"</h1>
+    <a href="tel:+375291881918"><img class="img-call" src="img/phone.png"></a>
     <section class="info container">
       <div class="info__logo">
         <img class="logo" src="img/logo2.png">
@@ -29,7 +30,7 @@
           <h3>ООО "СЕТЬ ДОСТАВОК"</h3>
         </div>
         <div class="info__company_contacts">
-          <a>+375 (29) 888-88-88</a>
+          <a href="tel:+375298888888">+375 (29) 888-88-88</a>
           <a>email@mail.ru</a>
         </div>
       </div>
@@ -60,6 +61,13 @@
     </div>
     <div class="tagline-container">
       <h2>НУЖНА БЫСТРАЯ ДОСТАВКА?</h2>
+      <form>
+        <h5>Заказать услугу</h5>
+        <input type="text" placeholder="Ваше имя">
+        <input type="text" placeholder="Ваш номер или email">
+        <textarea placeholder="Сообщение"></textarea>
+        <button type="submit">Заказать</button>
+      </form>
     </div>
   </header>
   <main>
@@ -85,7 +93,7 @@
         </div>
       </div>
       <div class="delivery__desc">
-        <h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ПО БЕЛАРУСИ БЫСТРО КАЧЕСТВЕННО ДОСТУПНО</h4>
+        <h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ПО БЕЛАРУСИ<br>БЫСТРО КАЧЕСТВЕННО ДОСТУПНО</h4>
         <p>Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
           Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
           Мы предоставляем услуги по перевозке крупногабаритных вещей и приборов в пределах города минска.
@@ -96,13 +104,12 @@
       <div class="container">
         <h3>ПОЧЕМУ МЫ?</h3>
         <ul>
-          <li>Экспресс доставка и грузоперевозки в любой город Беларуси: быстро, качественно, доступно</li>
-          <li>Низкие цены и высокое качество обслуживания</li>
-          <li>Оперативная доставка</li>
-          <li>Мы учтём Ваши пожелания и подберем подходящие именно Вам условия</li>
-          <li>Удобные подъездные пути и большая гостевая парковка</li>
-          <li>Возможность использования складских помещений</li>
-          <li>Мы доставим Ваш груз в нужное место в удобное для Вас время</li>
+          <li><span>01</span>Низкие цены и высокое качество обслуживания</li>
+          <li><span>04</span>Оперативная доставка и оперативня доставка</li>
+          <li><span>02</span>Мы учтём Ваши пожелания и подберем подходящие условия</li>
+          <li><span>05</span>Удобные подъездные пути и большая гостевая парковка</li>
+          <li><span>03</span>Возможность использования складских помещений</li>
+          <li><span>06</span>Мы доставим Ваш груз в нужное место в удобное для Вас время</li>
         </ul>
       </div>
     </section>
@@ -111,6 +118,10 @@
       <figure>
         <a href="docs/dog-por.docx"><img src="img/document.png" alt="Договор поручение"></a>
         <figcaption>Договор поручение</figcaption>
+      </figure>
+      <figure>
+        <a href="docs/dog-fiz.doc"><img src="img/document.png" alt="Договор физического лица"></a>
+        <figcaption>Договор физического лица</figcaption>
       </figure>
       <figure>
         <a href="docs/dog-ul.doc"><img src="img/document.png" alt="Договор юридического лица"></a>
@@ -132,7 +143,7 @@
         </div>
         <div class="schedule">
           <h3>РАСПИСАНИЕ ДОСТАВОК</h3>
-          <h4>Выберите город, чтобы узнать в какие дни осуществляется доставка</h4>
+          <h5>Выберите город, чтобы узнать в какие дни осуществляется доставка</h5>
           <select id="cities"></select>
           <button id="btn-schedule">УЗНАТЬ</button>
           <div class="schedule__answer"></div>
@@ -143,10 +154,28 @@
       <h3>КОНТАКТЫ</h3>
       <div class="contacts__info">
         <h4>ООО "СЕТЬ ДОСТАВОК"</h4>
-        <h4>ГРАФИК РАБОТЫ: 9.00 - 21.30</h4>
-        <h4>АДРЕС: г.Минск, ул.Гурского, 18</h4>
-        <h4>ТЕЛЕФОН: +375 (29) 888-88-88</h4>
-        <h4>E-MAIL: mail@mail.ru</h4>
+        <div class="contacts__info_tel">
+          <img src="img/velcom.png">
+          <a href="tel:+375291881918">+375 (29) 188-19-18</a>
+        </div>
+        <div class="contacts__info_tel">
+          <img src="img/mts.png">
+          <a href="tel:+375297767787">+375 (29) 776-77-87</a>
+        </div>
+        <div class="contacts__info_mail">
+          <img src="img/mail.png">
+          <a href="mailto:setdostavok@mail.ru">setdostavok@mail.ru</a>
+        </div>
+        <div class="contacts__info_time">
+          <h6>ГРАФИК РАБОТЫ:</h6>
+          <p>Пн-пт: 9.00-18.00, Сб: 9.00-15.00, Вс: выходной</p>
+          <p>Склад: 9.00 – 21.30</p>
+        </div>
+        <div class="contacts__info_adress">
+          <h6>АДРЕС:</h6>
+          <p>г.Минск, ул. Гурского, 18</p>
+        </div>
+        <h6>ОСТАЛИСЬ ВОПРОСЫ? ЗВОНИТЕ!</h6>
       </div>
       <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.570488991467!2d27.479056678400926!3d53.88896954617673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdaba91359697%3A0xf299b3b889028d0c!2z0YPQuy4g0JPRg9GA0YHQutC-0LPQviAxOCwg0JzQuNC90YHQuiwg0JHRltC70L7RgNGD0YHRjA!5e0!3m2!1suk!2sua!4v1530713982619" frameborder="0" style="border:0" allowfullscreen></iframe>
