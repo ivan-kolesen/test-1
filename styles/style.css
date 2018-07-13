@@ -626,7 +626,7 @@ iframe{
 		top: 15vh;
 		width: 90vw;
 		height: 55vh;
-		background-color: rgba(0,0,0,0.8);
+		background-color: rgba(0,0,0,0.9);
 		box-shadow: 0px 0px 2000px 500px #FFFFFF;
 	}
 
@@ -1047,8 +1047,8 @@ iframe{
 		top: 5vh;
 		width: 90vw;
 		height: 90vh;
-		background-color: rgba(0,0,0,0.8);
-		box-shadow: 0px 0px 2000px 500px #FFFFFF;
+		background-color: rgba(0,0,0,0.9);
+		box-shadow: 0 0 2000px 500px #FFFFFF;
 	}
 
 	.tagline-container textarea{
