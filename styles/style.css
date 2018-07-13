@@ -159,7 +159,7 @@ nav a:hover{
 	justify-content: center;
 }
 
-.tagline-container h5{
+.tagline-container h4{
 	color: #FFFFFF;
 	margin: 0 auto 15px;
 }
@@ -299,6 +299,7 @@ nav a:hover{
 .advantages li{
 	box-sizing: content-box;
 	width: 45%;
+	height: 80px;
 	display: flex;
 	font-size: 20px;
 	line-height: 24px;
@@ -310,14 +311,14 @@ nav a:hover{
 	align-items: center;
 	list-style-type: none;
 	box-shadow: 0 0 25px 7px rgba(255, 255, 255, 0.5);
-	padding: 10px;
+	padding: 0 20px 0 10px;
 }
 
 .advantages li span{
 	display: flex;
 	align-items: center;
 	font-size: 28px;
-	height: 155%;
+	height: 90px;
 	padding: 5px;
 	margin: 0 15px 0 5px;
 	color: #FFFFFF;
@@ -700,11 +701,12 @@ iframe{
 		font-size: 14px;
 		line-height: 16px;
 		width: 100%;
+		height: 66px;
 	}
 
 	.advantages li span{
-		height: 170%;
-		padding: 15px 5px;
+		height: 76px;
+		padding: 0 5px;
 	}
 
 	.advantages li:nth-child(1){
@@ -970,11 +972,12 @@ iframe{
 		font-size: 14px;
 		line-height: 18px;
 		width: 45%;
+		height: 70px;
+		padding: 0 10px;
 	}
 
 	.advantages li span{
-		height: 160%;
-		padding: 15px 5px;
+		height: 80px;
 	}
 
 	.documents{
