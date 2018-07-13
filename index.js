@@ -261,6 +261,7 @@ function showPrice() {
 }
 
 document.getElementById("request").addEventListener("click", openCloseRequest);
+document.querySelector(".img-cross").addEventListener("click", openCloseRequest);
 
 function openCloseRequest() {
   document.getElementById("form-request").classList.toggle("visibility");
