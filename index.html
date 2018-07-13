@@ -10,8 +10,8 @@
       $(document).ready(function () {
           $("nav").on("click", "a", function (event) {
               event.preventDefault();
-              let id = $(this).attr('href'),
-                  top = $(id).offset().top;
+              var id = $(this).attr('href'),
+                top = $(id).offset().top;
               $('body,html').animate({scrollTop: top-120}, 800);
           });
       });
@@ -168,7 +168,7 @@
         </div>
         <div class="contacts__info_tel">
           <img src="img/mts.png">
-          <a href="tel:+375297767787">+375 (29) 776-77-87</a>
+          <a href="tel:+375336307034">+375 (33) 630-70-34</a>
         </div>
         <div class="contacts__info_mail">
           <img src="img/mail.png">

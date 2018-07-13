@@ -24,7 +24,7 @@ document
   .addEventListener("click", setActiveDelivery);
 function setActiveDelivery(e) {
   const allOptions = document.querySelectorAll(".delivery__option");
-  allOptions.forEach(i => {
+  Array.prototype.forEach.call(allOptions, i => {
     i.classList.remove("delivery__option_active");
   });
   const active = e.target.closest(".delivery__option");
@@ -189,8 +189,6 @@ const schedule = {
         option.text = arrOfCities[i];
         list.appendChild(option);
     }
-
-
 })();
 
 document.getElementById('btn-schedule').addEventListener('click', showSchedule);
