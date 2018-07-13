@@ -836,7 +836,7 @@ iframe{
 	.accounts button{
 		background-color: #FFFFFF;
 		width: 50%;
-		margin-bottom: 30px;
+		margin: 0 auto 30px;
 	}
 
 	.schedule__answer,
