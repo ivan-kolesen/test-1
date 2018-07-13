@@ -21,6 +21,7 @@
   <header>
     <h1>ООО "Сеть доставок"</h1>
     <a href="tel:+375291881918"><img class="img-call" src="img/phone.png"></a>
+    <img id="request" class="img-request" src="img/request.png">
     <section class="info container">
       <div class="info__logo">
         <img class="logo" src="img/logo2.png">
@@ -30,14 +31,14 @@
           <h3>ООО "СЕТЬ ДОСТАВОК"</h3>
         </div>
         <div class="info__company_contacts">
-          <a href="tel:+375298888888">+375 (29) 888-88-88</a>
-          <a>email@mail.ru</a>
+          <a href="tel:+375291881918">+375 (29) 188-19-18</a>
+          <a>setdostavok@mail.ru</a>
         </div>
       </div>
     </section>
     <div class="panel">
       <nav class="container nav_desktop">
-          <ul class="panel">
+          <ul>
             <li><a href="#serv">УСЛУГИ</a></li>
             <li><a href="#docs">ДОКУМЕНТЫ</a></li>
             <li><a href="#accs">ДОСТАВКА</a></li>
@@ -61,10 +62,10 @@
     </div>
     <div class="tagline-container">
       <h2>НУЖНА БЫСТРАЯ ДОСТАВКА?</h2>
-      <form>
+      <form id="form-request">
         <h4>Заказать услугу</h4>
-        <input type="text" placeholder="Ваше имя">
-        <input type="text" placeholder="Ваш номер или email">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="text" placeholder="Ваш номер или email" required>
         <textarea placeholder="Сообщение"></textarea>
         <button type="submit">Заказать</button>
       </form>
@@ -140,6 +141,12 @@
       <div class="container">
         <div class="calc">
           <h3>КАЛЬКУЛЯТОР</h3>
+          <h5>Введите массу посылки, чтобы рассчитать приблизительную стоимость доставки</h5>
+          <form>
+            <input id="weight" type="text" placeholder="масса посылки, кг" required></input>
+            <button id="btn-calc" type="submit">РАССЧИТАТЬ</button>
+          </form>
+          <div class="calc__answer"></div>
         </div>
         <div class="schedule">
           <h3>РАСПИСАНИЕ ДОСТАВОК</h3>

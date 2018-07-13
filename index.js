@@ -199,8 +199,70 @@ function showSchedule() {
     const selected = document.getElementById('cities');
     const city = selected.value;
     const timetable = schedule[city];
-    document.querySelector('.schedule__answer').innerHTML = `<h5>Доставка в ${city} осуществляется в следующие дни:<br>${timetable}</h5>`;
+    document.querySelector('.schedule__answer').innerHTML = `<h5>Доставка в ${city} осуществляется в следующие дни: ${timetable}</h5>`;
     document.querySelector('.schedule__answer').style.display = "block";
 }
 
+const prices = {
+  9: [0, 1],
+  11: [1, 10],
+  15: [10, 20],
+  16: [20, 30],
+  17: [30, 40],
+  19: [40, 50],
+  22: [50, 60],
+  25: [60, 70],
+  28: [70, 80],
+  30: [80, 100],
+  33: [100, 120],
+  36: [120, 140],
+  40: [140, 160],
+  42: [160, 180],
+  45: [180, 200],
+  49: [200, 220],
+  52: [220, 240],
+  55: [240, 260],
+  60: [260, 280],
+  63: [280, 300],
+  68: [300, 320],
+  73: [320, 340],
+  80: [340, 360],
+  85: [360, 380],
+  95: [380, 400],
+  105: [400, 500],
+  125: [500, 600],
+  145: [600, 700],
+  170: [700, 800],
+  205: [800, 1000]
+};
 
+document.getElementById('btn-calc').addEventListener('click', showPrice);
+
+function showPrice() {
+  event.preventDefault();
+  const weight = document.getElementById('weight').value;
+  if(weight >= prices["205"][1]){
+    document.querySelector('.calc__answer').innerHTML = `<h5>Свяжитесь с нами, чтобы обсудить стоимость доставки такого увесистого груза:)</h5>`;
+  }
+  else if(weight > prices["9"][0] && weight < prices["205"][1]) {
+    for(let i in prices){
+      if(weight >= prices[i][0] && weight < prices[i][1]){
+        const price = i;
+        document.querySelector('.calc__answer').innerHTML = `<h5>Приблизительная стоимость доставки - ${price} BYN</h5>`;
+        break;
+      }
+    }
+  }
+  else{
+    document.querySelector('.calc__answer').innerHTML = `<h5 style="color: #ff6e69;">Проверьте правильность введенных данных!</h5>`;
+  }
+  document.querySelector('.calc__answer').style.display = "flex";
+
+}
+
+document.getElementById("request").addEventListener("click", openCloseRequest);
+
+function openCloseRequest() {
+  document.getElementById("form-request").classList.toggle("visibility");
+  document.getElementById("request").classList.toggle("img-request_red");
+}
