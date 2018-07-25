@@ -412,25 +412,35 @@ nav a:hover{
 	background-color: #e307cb;
 }
 
-.documents{
+.documents, .process{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 70px 0;
 }
 
-.documents h3{
+.documents h3,
+.process h3{
 	width: 100%;
 	color: black;
 }
 
+.process h5{
+	display: flex;
+	margin: 0 auto 15px;
+	width: 80%;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+}
+
 .documents a{
-	width: 15%;
+	width: 20%;
 	color: #000000;
 }
 
-.documents figure{
-
+.documents figure,
+.process figure{
 	transition: 0.3s;
 	margin: 50px auto 0;
 }
@@ -441,25 +451,46 @@ nav a:hover{
 	transition: 0.3s;
 }
 
+.process figure{
+	margin: 50px 1% 0;
+	width: 18%;
+	border: 2px solid #9514c3;
+}
+
+.process figure img {
+	width: 130px;
+}
+
 .documents figure:hover img{
 	background-color: #eca92b;
-	transition: 0.3s;
+
 }
 
 .documents figure:hover{
 	transition: 0.3s;
-	transform: scale(0.85);
+	transform: scale(0.9);
 }
 
 .documents figure:active{
 	z-index: -1;
 }
 
-.documents figcaption{
+.documents figcaption,
+.process figcaption{
 	font-size: 16px;
 	line-height: 18px;
 	margin: 20px auto 0;
 	width: 70%;
+}
+
+.process figcaption{
+	display: flex;
+	align-items: center;
+	background-color: #9514c3;
+	color: #FFFFFF;
+	width: 100%;
+	height: 100px;
+	padding: 5px;
 }
 
 .accounts, .accounts_minsk{
