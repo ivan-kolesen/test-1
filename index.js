@@ -1,23 +1,30 @@
 const DELIVERY_BEL =
-  "<h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ПО БЕЛАРУСИ<br>траляля траляля мы везем с собой кота</h4>\n" +
-  "          <p>кота кота кота кота котакота кота кота кота котакота кота кота кота котакота кота кота кота кота\n" +
-  "            кота кота кота кота котакота кота кота кота котакота кота кота кота котакота кота кота кота кота\n" +
-  "            кота кота кота кота котакота кота кота кота котакота кота кота кота котакота кота кота кота кота\n" +
-  "            кота кота кота кота котакота кота кота кота котакота кота кота кота котакота кота кота кота кота</p>";
+  "<h4>Экспресс доставка и грузоперевозки сборных грузов в любой город Беларуси:<br>быстро, качественно, доступно.</h4>\n" +
+  "        <ul>\n" +
+  "          <li>доставка по Беларуси, включает в себя мелкие населенные пункты страны, а также садовые товарищества.</li>\n" +
+  "          <li>мы доставим Ваш груз по самым низким ценам! Всего за 1 день!</li>\n" +
+  "          <li>стоимость доставки по Беларуси Вы можете рассчитать самостоятельно с помощью Калькулятора.</li>\n" +
+  "        </ul>";
 
 const DELIVERY_MINSK =
-  "<h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ПО МИНСКУ<br>трам пам пам мы везем собаку</h4>\n" +
-  "          <p>собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку .\n" +
-  "собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку .\n" +
-  "            собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку \n" +
-  "            собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку собаку .</p>";
+  "<h4>Доставим Ваш груз в любую точку Минска!<br>Для чего подойдет услуга грузоперевозок в Минске?</h4>\n" +
+  "        <ul>\n" +
+  "          <li>дачный, офисный, квартирный переезд</li>\n" +
+  "          <li>перевозка мебели, доставка строительных материалов</li>\n" +
+  "          <li>развоз товара по точкам</li>\n" +
+  "          <li>аренда грузового авто</li>\n" +
+  "        </ul>";
 
 const DELIVERY_INET =
-  "<h4>ДОСТАВКА И ГРУЗОПЕРЕВОЗКА ИЗ ИНЕТ МАГАЗА<br>динь динь дон динь динь дон и попугая </h4>\n" +
-  "          <p>попугая попугая .попугая попугая попугая попугая попугая попугая попугая попугая попугая попугая \n" +
-  "            попугая попугая .попугая попугая попугая попугая попугая попугая попугая попугая попугая попугая \n" +
-  "            попугая попугая .попугая попугая попугая попугая попугая попугая попугая попугая попугая попугая .\n" +
-  "            попугая попугая .попугая попугая попугая попугая попугая попугая попугая попугая попугая попугая .</p>";
+  "<h4>Наша служба курьерской доставки поможет интернет-магазинам максимально оптимизировать и\n" +
+  "          сделать более эффективной транспортировку, отправляя заказы непосредственно из офиса онлайн\n" +
+  "          магазина в указанное конечным получателем место.<br>Владельцы интернет - магазинов и их клиенты, могут:</h4>\n" +
+  "        <ul>\n" +
+  "          <li>в удобной форме оставлять заявки</li>\n" +
+  "          <li>просматривать даты доставок</li>\n" +
+  "          <li>рассчитывать стоимость</li>\n" +
+  "          <li>отследить доставку</li>\n" +
+  "        </ul>";
 
 document
   .querySelector(".delivery__options")
@@ -32,9 +39,26 @@ function setActiveDelivery(e) {
 
   const activeDesc = active.getAttribute("id");
   const deliveryDesc = document.querySelector(".delivery__desc");
-  if (activeDesc === "delivery_bel") deliveryDesc.innerHTML = DELIVERY_BEL;
-  if (activeDesc === "delivery_minsk") deliveryDesc.innerHTML = DELIVERY_MINSK;
-  if (activeDesc === "delivery_inet") deliveryDesc.innerHTML = DELIVERY_INET;
+  if (activeDesc === "delivery_bel") {
+    deliveryDesc.innerHTML = DELIVERY_BEL;
+    document.querySelector(".accounts").style.display = "block";
+    document.querySelector(".schedule").style.display = "block";
+    document.querySelector(".accounts_minsk").style.display = "none";
+    document.querySelector(".inet-prices").style.display = "none";
+  }
+  if (activeDesc === "delivery_minsk") {
+    deliveryDesc.innerHTML = DELIVERY_MINSK;
+    document.querySelector(".accounts_minsk").style.display = "block";
+    document.querySelector(".accounts").style.display = "none";
+    document.querySelector(".inet-prices").style.display = "none";
+  }
+  if (activeDesc === "delivery_inet") {
+    deliveryDesc.innerHTML = DELIVERY_INET;
+    document.querySelector(".accounts").style.display = "block";
+    document.querySelector(".schedule").style.display = "none";
+    document.querySelector(".accounts_minsk").style.display = "none";
+    document.querySelector(".inet-prices").style.display = "block";
+  }
 }
 
 const schedule = {

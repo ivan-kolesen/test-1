@@ -291,8 +291,8 @@ nav a:hover{
 }
 
 .delivery__desc{
-	width: 100%;
-	margin-bottom: 50px;
+	width: 80%;
+	margin:0 auto 50px;
 }
 
 .delivery__desc h4{
@@ -303,6 +303,29 @@ nav a:hover{
 .delivery__desc p{
 	width: 80%;
 	margin: auto;
+}
+
+.delivery__desc ul{
+	width: 70%;
+	margin: auto;
+}
+
+.delivery__desc li{
+	font-size: 20px;
+	margin: 0 auto 10px;
+	list-style-type: none;
+}
+
+.delivery__desc li::before{
+	position: relative;
+	top: 6px;
+	background-image: url("../img/list_item.png");
+	background-size: 25px 25px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	content:"";
+	margin: 0 10px 0 0;
 }
 
 .advantages{
@@ -329,12 +352,12 @@ nav a:hover{
 
 .advantages li{
 	box-sizing: content-box;
-	width: 45%;
-	height: 80px;
+	width: 40%;
+	height: 70px;
 	display: flex;
-	font-size: 20px;
-	line-height: 24px;
-	margin: 15px auto;
+	font-size: 14px;
+	line-height: 14px;
+	margin: 10px auto;
 	color: #000000;
 	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 5px;
@@ -349,7 +372,7 @@ nav a:hover{
 	display: flex;
 	align-items: center;
 	font-size: 28px;
-	height: 90px;
+	height: 80px;
 	padding: 5px;
 	margin: 0 15px 0 5px;
 	color: #FFFFFF;
@@ -358,27 +381,35 @@ nav a:hover{
 }
 
 .advantages li:nth-child(1) span{
-	background-color: #ff9678;
+	background-color: #ff1517;
 }
 
 .advantages li:nth-child(2) span{
-	background-color: #e2c62e;
+	background-color: #faa027;
 }
 
 .advantages li:nth-child(3) span{
-	background-color: #14c86b;
+	background-color: #f9d42f;
 }
 
 .advantages li:nth-child(4) span{
-	background-color: #d22b26;
+	background-color: #38b124;
 }
 
 .advantages li:nth-child(5) span{
-	background-color: #82bfe5;
+	background-color: #73bbd7;
 }
 
 .advantages li:nth-child(6) span{
-	background-color: #95c30e;
+	background-color: #162ac3;
+}
+
+.advantages li:nth-child(7) span{
+	background-color: #9514c3;
+}
+
+.advantages li:nth-child(8) span{
+	background-color: #e307cb;
 }
 
 .documents{
@@ -393,8 +424,13 @@ nav a:hover{
 	color: black;
 }
 
-.documents figure{
+.documents a{
 	width: 15%;
+	color: #000000;
+}
+
+.documents figure{
+
 	transition: 0.3s;
 	margin: 50px auto 0;
 }
@@ -420,12 +456,13 @@ nav a:hover{
 }
 
 .documents figcaption{
-	font-size: 18px;
+	font-size: 16px;
+	line-height: 18px;
 	margin: 20px auto 0;
-	width: 80%;
+	width: 70%;
 }
 
-.accounts{
+.accounts, .accounts_minsk{
 	padding: 70px 0;
 	background-image: url("../img/back4.png");
 	background-size: cover;
@@ -434,24 +471,38 @@ nav a:hover{
 	background-color: black;
 }
 
+.accounts_minsk{
+	display: none;
+}
+
 .accounts .container{
 	display: flex;
 	justify-content: space-around;
 }
 
-.calc, .schedule{
+.calc, .schedule, .price-minsk, .inet-prices{
 	width: 45%;
 	flex-wrap: nowrap;
+	margin: auto;
 }
 
-.accounts h3{
+.inet-prices{
+	display: none;
+}
+
+.accounts h3,
+.accounts_minsk h3,
+.inet-prices h3{
 	color: #FFFFFF;
 	margin-bottom: 30px;
 }
 
-.accounts h5{
+.accounts h5,
+.accounts_minsk h5,
+.inet-prices h5{
 	color: #fffda0;
 	font-size: 20px;
+	margin-top: 5px;
 }
 
 .accounts input{
@@ -576,6 +627,7 @@ footer{
 iframe{
 	width: 100%;
 	height: 400px;
+
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
@@ -748,6 +800,14 @@ iframe{
 		line-height: 15px;
 	}
 
+	.delivery__desc{
+		width: 100%;
+	}
+
+	.delivery__desc ul{
+		width: 100%;
+	}
+
 	.delivery__desc h4{
 		margin: 0 auto 20px;
 	}
@@ -786,7 +846,7 @@ iframe{
 	}
 
 	.advantages li:nth-child(2){
-		order: 4;
+		order: 5;
 	}
 
 	.advantages li:nth-child(3){
@@ -794,7 +854,7 @@ iframe{
 	}
 
 	.advantages li:nth-child(4){
-		order: 5;
+		order: 6;
 	}
 
 	.advantages li:nth-child(5){
@@ -802,15 +862,27 @@ iframe{
 	}
 
 	.advantages li:nth-child(6){
-		order: 6;
+		order: 7;
+	}
+
+	.advantages li:nth-child(7){
+		order: 4;
+	}
+
+	.advantages li:nth-child(8){
+		order: 8;
 	}
 
 	.documents{
 		padding: 40px 0;
 	}
 
-	.documents figure{
+	.documents a{
 		width: 50%;
+	}
+
+	.documents figure{
+		width: 100%;
 		margin: 25px auto 0;
 		padding: 5px;
 	}
@@ -827,7 +899,7 @@ iframe{
 		flex-direction: column;
 	}
 
-	.calc, .schedule{
+	.calc, .schedule, .price-minsk, .inet-prices{
 		width: 100%;
 	}
 
@@ -1055,6 +1127,14 @@ iframe{
 		height: 70px;
 	}
 
+	.delivery__desc{
+		width: 100%;
+	}
+
+	.delivery__desc ul{
+		width: 100%;
+	}
+
 	.delivery__desc p{
 		width: 90%;
 	}
@@ -1084,8 +1164,12 @@ iframe{
 		padding: 40px 0;
 	}
 
+	.documents a{
+		width: 20%;
+	}
+
 	.documents figcaption{
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.accounts{
@@ -1096,7 +1180,7 @@ iframe{
 		flex-direction: column;
 	}
 
-	.calc, .schedule{
+	.calc, .schedule, .price-minsk, .inet-prices{
 		width: 100%;
 	}
 
