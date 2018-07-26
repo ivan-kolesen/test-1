@@ -631,7 +631,6 @@ nav a:hover{
 .schedule__answer,
 .calc__answer{
 	display: none;
-	height: 82px;
 	align-items: center;
 	justify-content: center;
 	margin: 30px auto 0;
