@@ -5,259 +5,315 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ООО "Сеть доставок"</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script type="text/javascript">
-      $(document).ready(function () {
-          $("nav").on("click", "a", function (event) {
-              event.preventDefault();
-              var id = $(this).attr('href'),
-                top = $(id).offset().top;
-              $('body,html').animate({scrollTop: top-120}, 800);
-          });
+    $(document).ready(function () {
+      $("nav").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+          top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top - 120}, 800);
       });
+    });
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() != 0) {
+          $('#toTop').fadeIn();
+        } else {
+          $('#toTop').fadeOut();
+        }
+      });
+      $('#toTop').click(function () {
+        $('body,html').animate({scrollTop: 0}, 800);
+      });
+    });
   </script>
 </head>
 <body>
-  <header>
-    <h1>ООО "Сеть доставок"</h1>
-    <a href="tel:+375291881918"><img class="img-call" src="img/phone.png"></a>
-    <img id="request" class="img-request" src="img/request.png">
-    <section class="info container">
-      <div class="info__logo">
-        <img class="logo" src="img/logo2.png">
-      </div>
-      <div class="info__company">
-        <div class="info__company_name">
-          <h3>ООО "СЕТЬ ДОСТАВОК"</h3>
-        </div>
-        <div class="info__company_contacts">
-          <a href="tel:+375291881918">+375 (29) 188-19-18</a>
-          <a>setdostavok@mail.ru</a>
-        </div>
-      </div>
-    </section>
-    <div class="panel">
-      <nav class="container nav_desktop">
-          <ul>
-            <li><a href="#serv">УСЛУГИ</a></li>
-            <li><a href="#docs">ДОКУМЕНТЫ</a></li>
-            <li><a href="#accs">ДОСТАВКА</a></li>
-            <li><a href="#cont">КОНТАКТЫ</a></li>
-          </ul>
-      </nav>
-      <nav class="nav_molile">
-        <input type="checkbox" id="check-menu">
-        <label for="check-menu">MENU</label>
-        <div class="burger-line first"></div>
-        <div class="burger-line second"></div>
-        <div class="burger-line third"></div>
-        <div class="burger-line fourth"></div>
-        <nav class="main-menu">
-          <a href="#serv">УСЛУГИ</a>
-          <a href="#docs">ДОКУМЕНТЫ</a>
-          <a href="#accs">ДОСТАВКА</a>
-          <a href="#cont">КОНТАКТЫ</a>
-        </nav>
-      </nav>
+<header>
+  <h1>ООО "Сеть доставок"</h1>
+  <a href="tel:+375291881918"><img class="img-call" src="img/phone.png"></a>
+  <img id="request" class="img-request" src="img/request.png">
+  <img id="toTop" class="img-to-top" src="img/top.png">
+  <section class="info container">
+    <div class="info__logo">
+      <img class="logo" src="img/logo2.png">
     </div>
-    <div class="tagline-container">
-      <h2>НУЖНА БЫСТРАЯ ДОСТАВКА?</h2>
-      <form id="form-request">
-        <img src="img/cross.png" class="img-cross">
-        <h4>Заказать услугу</h4>
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="text" placeholder="Ваш номер или email" required>
-        <textarea placeholder="Сообщение"></textarea>
-        <button type="submit">Заказать</button>
-      </form>
+    <div class="info__company">
+      <div class="info__company_name">
+        <h3>ООО "СЕТЬ ДОСТАВОК"</h3>
+      </div>
+      <div class="info__company_contacts">
+        <a href="tel:+375291881918">+375 (29) 188-19-18</a>
+        <a>setdostavok@mail.ru</a>
+      </div>
     </div>
-  </header>
-  <main>
-    <section id="serv" class="delivery container">
-      <div class="delivery__options">
-        <div id="delivery_bel" class="delivery__option delivery__option_active">
-          <figure>
-            <img src="img/delivery-icon-1.png">
-            <figcaption>ДОСТАВКА ПО БЕЛАРУСИ</figcaption>
-          </figure>
-        </div>
-        <div id="delivery_minsk" class="delivery__option">
-          <figure>
-            <img src="img/delivery-icon-2.png">
-            <figcaption>ДОСТАВКА ПО МИНСКУ</figcaption>
-          </figure>
-        </div>
-        <div id="delivery_inet" class="delivery__option">
-          <figure>
-            <img src="img/delivery-icon-3.png">
-            <figcaption>ИЗ ИНТЕРНЕТ-МАГАЗИНОВ</figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="delivery__desc">
-        <h4>Экспресс доставка и грузоперевозки сборных грузов в любой город Беларуси:<br>быстро, качественно, доступно.</h4>
-        <ul>
-          <li><span></span>доставка по Беларуси, включает в себя мелкие населенные пункты страны, а также садовые товарищества.</li>
-          <li>мы доставим Ваш груз по самым низким ценам! Всего за 1 день!</li>
-          <li>стоимость доставки по Беларуси Вы можете рассчитать самостоятельно с помощью Калькулятора.</li>
-        </ul>
-      </div>
-    </section>
-    <section id="accs" class="accounts">
-      <div class="container">
-        <div class="calc">
-          <h3>КАЛЬКУЛЯТОР</h3>
-          <h5>Введите массу посылки, чтобы рассчитать приблизительную стоимость доставки</h5>
-          <form>
-            <input id="weight" type="text" placeholder="масса посылки, кг" required></input>
-            <button id="btn-calc" type="submit">РАССЧИТАТЬ</button>
-          </form>
-          <div class="calc__answer"></div>
-        </div>
-        <div class="schedule">
-          <h3>РАСПИСАНИЕ ДОСТАВОК</h3>
-          <h5>Выберите город, чтобы узнать в какие дни осуществляется доставка</h5>
-          <select id="cities"></select>
-          <button id="btn-schedule">УЗНАТЬ</button>
-          <div class="schedule__answer"></div>
-        </div>
-        <div class="inet-prices">
-          <h3>УСЛОВИЯ И ЦЕНЫ</h3>
-          <h5>Если Вы оставляете более 5 одновременных заявок на доставку - забор товара осуществляется бесплатно.
-            Менее 5 заявок  -стоимость 12 BYN.</h5>
-            <h5>Стоимость развоза товара за одну точку по г. Минску:<br>
-            В течении 3-4 часов  – 13 BYN<br>
-            На следующий день – 6,5 BYN.
-          </h5>
-        </div>
-      </div>
-    </section>
-    <section id="accs_minsk" class="accounts_minsk">
-      <div class="container">
-        <div class="price-minsk">
-          <h3>СТОИМОСТЬ АРЕНДЫ</h3>
-          <h5>В черте г. Минска – 1час = 14 BYN</h5>
-          <h5>За городом – 1 км. = 0.45 BYN</h5>
-        </div>
-      </div>
-    </section>
-    <section id="proc" class="container process">
-      <h3>ПРОЦЕСС</h3>
-      <figure>
-        <span>1</span>
-        <h5>Заявка на грузоперевозку</h5>
-        <img src="img/1_order.png" alt="Заявка на грузоперевозку">
-        <figcaption>Необходимо заполнить форму на сайте или связаться с нами по телефону</figcaption>
-      </figure>
-      <figure>
-        <span>2</span>
-        <h5>Оформление документации</h5>
-        <img src="img/2_naklad.png" alt="Оформление стандартной документации">
-        <figcaption>Накладные по форме ТТН-1<br>Заключение договора</figcaption>
-      </figure>
-      <figure>
-        <span>3</span>
-        <h5>Передача груза</h5>
-        <img src="img/3_box.png" alt="Передача груза нам для дальнейшей доставки">
-        <figcaption>Вы можете самостоятельно привезти груз склад, либо мы заберем его сами</figcaption>
-      </figure>
-      <figure>
-        <span>4</span>
-        <h5>Доставка</h5>
-        <img src="img/4_delivery.png" alt="Доставка">
-        <figcaption>В день доставки оператор нашей компании сообщает покупателю ориентировочное
-          время прибытия машины.</figcaption>
-      </figure>
-      <figure>
-        <span>5</span>
-        <h5>Оплата</h5>
-        <img src="img/5_pay.png" alt="Оплата">
-        <figcaption>Конечный расчет происходит в офисе нашей компании</figcaption>
-      </figure>
-    </section>
-    <section id="adv" class="advantages">
-      <div class="container">
-        <h3>ПОЧЕМУ МЫ?</h3>
-        <ul>
-          <li><span>01</span> Мы предлагаем Вам низкие цены и высокое качество обслуживания</li>
-          <li><span>05</span>Мы работаем как с крупными предприятиями, так и с физическими лицами</li>
-          <li><span>02</span>Мы осуществляем доставку в любой город Беларуси на следующий день</li>
-          <li><span>06</span>Мы заберём груз с указанного клиентом места</li>
-          <li><span>03</span>Мы предлагем в Ваше распоряжение наши складские помещения</li>
-          <li><span>07</span>Мы предлагаем наличный и безналичный расчет</li>
-          <li><span>04</span>Мы имеем большую гостевую парковку и удобные подъездные пути</li>
-          <li><span>08</span>Мы владеем личным автопарком (вместимость до 25 кубов, длина - до 4.5 метров, грузоподъемность - до 3 тонн)</li>
-        </ul>
-      </div>
-    </section>
-    <section id="docs" class="documents container">
-      <h3>ДОКУМЕНТЫ</h3>
-      <a href="docs/dog-por.docx">
+  </section>
+  <div class="panel">
+    <nav class="container nav_desktop">
+      <ul>
+        <li><a href="#serv">УСЛУГИ</a></li>
+        <li><a href="#proc">ПРОЦЕСС</a></li>
+        <li><a href="#docs">ДОКУМЕНТЫ</a></li>
+        <li><a href="#cont">КОНТАКТЫ</a></li>
+      </ul>
+    </nav>
+    <nav class="nav_molile">
+      <input type="checkbox" id="check-menu">
+      <label for="check-menu">MENU</label>
+      <div class="burger-line first"></div>
+      <div class="burger-line second"></div>
+      <div class="burger-line third"></div>
+      <div class="burger-line fourth"></div>
+      <nav class="main-menu">
+        <a href="#serv">УСЛУГИ</a>
+        <a href="#proc">ПРОЦЕСС</a>
+        <a href="#docs">ДОКУМЕНТЫ</a>
+        <a href="#cont">КОНТАКТЫ</a>
+      </nav>
+    </nav>
+  </div>
+  <div class="tagline-container">
+    <h2>НУЖНА БЫСТРАЯ ДОСТАВКА?</h2>
+    <form id="form-request" action="https://formspree.io/kolesen.ivan@gmail.com"
+          method="POST">
+      <img src="img/cross.png" class="img-cross">
+      <h4>Заказать услугу</h4>
+      <input type="text" placeholder="Ваше имя" name="name" required>
+      <input type="text" placeholder="Ваш номер или email" name="contact" required>
+      <textarea placeholder="Сообщение" name="message"></textarea>
+      <button type="submit">Заказать</button>
+    </form>
+  </div>
+</header>
+<main>
+  <section id="serv" class="delivery container">
+    <h3>УСЛУГИ</h3>
+    <div class="delivery__options">
+      <div id="delivery_bel" class="delivery__option delivery__option_active">
         <figure>
-          <img src="img/document.png" alt="Договор поручение">
-          <figcaption>Договор поручение</figcaption>
+          <img src="img/delivery-icon-1.png">
+          <figcaption>ДОСТАВКА ПО БЕЛАРУСИ</figcaption>
         </figure>
-      </a>
-      <a href="docs/dog-fiz.doc">
-        <figure>
-          <img src="img/document.png" alt="Договор физического лица">
-          <figcaption>Договор физического лица</figcaption>
-        </figure>
-      </a>
-      <a href="docs/dog-ul.doc">
-        <figure>
-          <img src="img/document.png" alt="Договор юридического лица">
-          <figcaption>Договор юридического лица</figcaption>
-        </figure>
-      </a>
-      <a href="docs/app-del.doc">
-        <figure>
-          <img src="img/document.png" alt="Заявка на доставку">
-          <figcaption>Заявка на доставку</figcaption>
-        </figure>
-      </a>
-      <a href="docs/rules.docx">
-        <figure>
-          <img src="img/document.png" alt="Правила оказания услуг">
-          <figcaption>Правила оказания услуг</figcaption>
-        </figure>
-      </a>
-    </section>
-    <section id="cont" class="contacts container">
-      <h3>КОНТАКТЫ</h3>
-      <div class="contacts__info">
-        <h4>ООО "СЕТЬ ДОСТАВОК"</h4>
-        <div class="contacts__info_tel">
-          <img src="img/velcom.png">
-          <a href="tel:+375291881918">+375 (29) 188-19-18</a>
-        </div>
-        <div class="contacts__info_tel">
-          <img src="img/mts.png">
-          <a href="tel:+375336307034">+375 (33) 630-70-34</a>
-        </div>
-        <div class="contacts__info_mail">
-          <img src="img/mail.png">
-          <a href="mailto:setdostavok@mail.ru">setdostavok@mail.ru</a>
-        </div>
-        <div class="contacts__info_time">
-          <h6>ГРАФИК РАБОТЫ:</h6>
-          <p>Пн-пт: 9.00-18.00, Сб: 9.00-15.00, Вс: выходной</p>
-          <p>Склад: 9.00 – 21.30</p>
-        </div>
-        <div class="contacts__info_adress">
-          <h6>АДРЕС:</h6>
-          <p>г.Минск, ул. Гурского, 18</p>
-        </div>
-        <h6>ОСТАЛИСЬ ВОПРОСЫ? ЗВОНИТЕ!</h6>
       </div>
-      <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.570488991467!2d27.479056678400926!3d53.88896954617673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdaba91359697%3A0xf299b3b889028d0c!2z0YPQuy4g0JPRg9GA0YHQutC-0LPQviAxOCwg0JzQuNC90YHQuiwg0JHRltC70L7RgNGD0YHRjA!5e0!3m2!1suk!2sua!4v1530713982619" frameborder="0" style="border:3px solid rgba(0,0,0,0.5)" allowfullscreen></iframe>
+      <div id="delivery_minsk" class="delivery__option">
+        <figure>
+          <img src="img/delivery-icon-2.png">
+          <figcaption>ДОСТАВКА ПО МИНСКУ</figcaption>
+        </figure>
       </div>
-    </section>
-  </main>
-  <footer>
+      <div id="delivery_inet" class="delivery__option">
+        <figure>
+          <img src="img/delivery-icon-3.png">
+          <figcaption>ИЗ ИНТЕРНЕТ-МАГАЗИНОВ</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="delivery__desc">
+      <h4>Экспресс доставка и грузоперевозки сборных грузов в любой город Беларуси:<br>быстро,
+        качественно, доступно.</h4>
+      <ul>
+        <li><span></span>доставка по Беларуси, включает в себя мелкие населенные пункты страны, а
+          также садовые товарищества.
+        </li>
+        <li>мы доставим Ваш груз по самым низким ценам! Всего за 1 день!</li>
+        <li>стоимость доставки по Беларуси Вы можете рассчитать самостоятельно с помощью
+          Калькулятора.
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="accs" class="accounts">
+    <div class="container">
+      <div class="calc">
+        <h3>КАЛЬКУЛЯТОР</h3>
+        <h5>Введите массу посылки, чтобы рассчитать приблизительную стоимость доставки доставки по
+          Беларуси</h5>
+        <form>
+          <input id="weight" type="text" placeholder="масса посылки, кг" required></input>
+          <button id="btn-calc" type="submit">РАССЧИТАТЬ</button>
+        </form>
+        <div class="calc__answer"></div>
+      </div>
+      <div class="schedule">
+        <h3>РАСПИСАНИЕ ДОСТАВОК</h3>
+        <h5>Выберите город, чтобы узнать в какие дни осуществляется доставка</h5>
+        <select id="cities"></select>
+        <button id="btn-schedule">УЗНАТЬ</button>
+        <div class="schedule__answer"></div>
+      </div>
+      <div class="inet-prices">
+        <h3>УСЛОВИЯ И ЦЕНЫ</h3>
+        <table>
+          <tr>
+            <th colspan="2">Стоимость забора товара</th>
+          </tr>
+          <tr>
+            <td>< 5 заявок</td>
+            <td>12 BYN</td>
+          </tr>
+          <tr>
+            <td>>= 5 заявок</td>
+            <td>бесплатно</td>
+          </tr>
+          <tr>
+            <th colspan="2">Стоимость развоза товара</th>
+          </tr>
+          <tr>
+            <td>В течении 3-4 часов</td>
+            <td>13 BYN</td>
+          </tr>
+          <tr>
+            <td>На следующий день</td>
+            <td>6,5 BYN</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="accs_minsk" class="accounts_minsk">
+    <div class="container">
+      <div class="price-minsk">
+        <h3>СТОИМОСТЬ АРЕНДЫ</h3>
+        <table>
+          <tr>
+            <td>В черте г. Минска</td>
+            <td>1час</td>
+            <td>14 BYN</td>
+          </tr>
+          <tr>
+            <td>За городом</td>
+            <td>1 км</td>
+            <td>0.45 BYN</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="proc" class="container process">
+    <h3>ПРОЦЕСС</h3>
+    <figure>
+      <span>1</span>
+      <h5>Заявка на грузоперевозку</h5>
+      <img src="img/1_order.png" alt="Заявка на грузоперевозку">
+      <figcaption>Необходимо заполнить форму на сайте или связаться с нами по телефону</figcaption>
+    </figure>
+    <figure>
+      <span>2</span>
+      <h5>Оформление документации</h5>
+      <img src="img/2_naklad.png" alt="Оформление стандартной документации">
+      <figcaption>Накладные по форме ТТН-1<br>Заключение договора</figcaption>
+    </figure>
+    <figure>
+      <span>3</span>
+      <h5>Передача груза</h5>
+      <img src="img/3_box.png" alt="Передача груза нам для дальнейшей доставки">
+      <figcaption>Вы можете самостоятельно привезти груз на склад, либо мы заберем его сами
+      </figcaption>
+    </figure>
+    <figure>
+      <span>4</span>
+      <h5>Доставка</h5>
+      <img src="img/4_delivery.png" alt="Доставка">
+      <figcaption>В день доставки оператор нашей компании сообщает покупателю ориентировочное
+        время прибытия машины.
+      </figcaption>
+    </figure>
+    <figure>
+      <span>5</span>
+      <h5>Оплата</h5>
+      <img src="img/5_pay.png" alt="Оплата">
+      <figcaption>Конечный расчет происходит в офисе нашей компании</figcaption>
+    </figure>
+  </section>
+  <section id="adv" class="advantages">
+    <div class="container">
+      <h3>ПОЧЕМУ МЫ?</h3>
+      <ul>
+        <li><span>01</span> Мы предлагаем Вам низкие цены и высокое качество обслуживания</li>
+        <li><span>05</span>Мы работаем как с крупными предприятиями, так и с физическими лицами</li>
+        <li><span>02</span>Мы осуществляем доставку в любой город Беларуси на следующий день</li>
+        <li><span>06</span>Мы заберём груз с указанного клиентом места</li>
+        <li><span>03</span>Мы предлагем в Ваше распоряжение наши складские помещения</li>
+        <li><span>07</span>Мы предлагаем наличный и безналичный расчет</li>
+        <li><span>04</span>Мы имеем большую гостевую парковку и удобные подъездные пути</li>
+        <li><span>08</span>Мы владеем личным автопарком (вместимость до 25 кубов, длина - до 4.5
+          метров, грузоподъемность - до 3 тонн)
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="docs" class="documents container">
+    <h3>ДОКУМЕНТЫ</h3>
+    <a href="docs/dog-por.docx">
+      <figure>
+        <img src="img/document.png" alt="Договор поручение">
+        <figcaption>Договор поручение</figcaption>
+      </figure>
+    </a>
+    <a href="docs/dog-fiz.doc">
+      <figure>
+        <img src="img/document.png" alt="Договор физического лица">
+        <figcaption>Договор физического лица</figcaption>
+      </figure>
+    </a>
+    <a href="docs/dog-ul.doc">
+      <figure>
+        <img src="img/document.png" alt="Договор юридического лица">
+        <figcaption>Договор юридического лица</figcaption>
+      </figure>
+    </a>
+    <a href="docs/app-del.doc">
+      <figure>
+        <img src="img/document.png" alt="Заявка на доставку">
+        <figcaption>Заявка на доставку</figcaption>
+      </figure>
+    </a>
+    <a href="docs/rules.docx">
+      <figure>
+        <img src="img/document.png" alt="Правила оказания услуг">
+        <figcaption>Правила оказания услуг</figcaption>
+      </figure>
+    </a>
+  </section>
+  <section id="cont" class="contacts container">
+    <h3>КОНТАКТЫ</h3>
+    <div class="contacts__info">
+      <h4>ООО "СЕТЬ ДОСТАВОК"</h4>
+      <div class="contacts__info_tel">
+        <img src="img/velcom.png">
+        <a href="tel:+375291881918">+375 (29) 188-19-18</a>
+      </div>
+      <div class="contacts__info_tel">
+        <img src="img/mts.png">
+        <a href="tel:+375336307034">+375 (33) 630-70-34</a>
+      </div>
+      <div class="contacts__info_mail">
+        <img src="img/mail.png">
+        <a href="mailto:setdostavok@mail.ru">setdostavok@mail.ru</a>
+      </div>
+      <div class="contacts__info_time">
+        <h6>ГРАФИК РАБОТЫ:</h6>
+        <p>Пн-пт: 9.00-18.00, Сб: 9.00-15.00, Вс: выходной</p>
+        <p>Склад: 9.00 – 21.30</p>
+      </div>
+      <div class="contacts__info_adress">
+        <h6>АДРЕС:</h6>
+        <p>г.Минск, ул. Гурского, 18</p>
+      </div>
+      <h6>ОСТАЛИСЬ ВОПРОСЫ? ЗВОНИТЕ!</h6>
+    </div>
+    <div class="contacts__map">
+      <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.570488991467!2d27.479056678400926!3d53.88896954617673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdaba91359697%3A0xf299b3b889028d0c!2z0YPQuy4g0JPRg9GA0YHQutC-0LPQviAxOCwg0JzQuNC90YHQuiwg0JHRltC70L7RgNGD0YHRjA!5e0!3m2!1suk!2sua!4v1530713982619"
+          frameborder="0" style="border:3px solid rgba(0,0,0,0.5)" allowfullscreen></iframe>
+    </div>
+  </section>
+</main>
+<!--  <footer>
 
-  </footer>
-  <script src="index.js"></script>
+  </footer>-->
+<script src="index.js"></script>
 </body>
 </html>

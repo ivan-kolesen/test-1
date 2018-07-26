@@ -277,7 +277,7 @@ function showPrice() {
     }
   }
   else{
-    document.querySelector('.calc__answer').innerHTML = `<h5 style="color: #ff6e69;">Проверьте правильность введенных данных!</h5>`;
+    document.querySelector('.calc__answer').innerHTML = `<h5 style="color: #ff6e69;>Проверьте правильность введенных данных!</h5>`;
   }
   document.querySelector('.calc__answer').style.display = "flex";
 
@@ -288,5 +288,4 @@ document.querySelector(".img-cross").addEventListener("click", openCloseRequest)
 
 function openCloseRequest() {
   document.getElementById("form-request").classList.toggle("visibility");
-  document.getElementById("request").classList.toggle("img-request_red");
 }
