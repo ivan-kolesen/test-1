@@ -591,8 +591,9 @@ nav a:hover{
 .inet-prices h5{
 	color: #fffda0;
 	font-size: 20px;
-	margin-top: 5px;
 	height: 60px;
+	display: flex;
+	align-items: center;
 }
 
 .accounts input{
